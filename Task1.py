@@ -18,3 +18,7 @@ def hanoi_solver(n):
             
     move(n, 0, 2, 1)
     return "\n".join(result)
+
+# for loop
+for i in range(1, 6):
+    print("*" * i)
