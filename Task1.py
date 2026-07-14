@@ -22,3 +22,18 @@ def hanoi_solver(n):
 # for loop
 for i in range(1, 6):
     print("*" * i)
+
+# pattren of A
+rows = 7
+
+for i in range(rows):
+    for j in range(rows):
+        if (j == 0 or j == rows - 1) and i != 0:
+            print("*", end="")
+        elif i == 0 and j != 0 and j != rows - 1:
+            print("*", end="")
+        elif i == rows // 2:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
