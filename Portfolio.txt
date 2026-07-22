@@ -1,4 +1,0 @@
-AAPL 32 Shares = 5760$
-TSLA 45 Shares = 11250$
-
-Total Investment = 17010$
