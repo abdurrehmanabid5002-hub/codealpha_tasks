@@ -7,7 +7,7 @@ def play_hangman():
     incorrect_guesses_left = 6
 
     print("Welcome to Hangman!")
-    print("I have selected a word. Let's see if you can guess it.")
+    print("I have selected a word. Let see if you can guess it.")
 
     while incorrect_guesses_left > 0:
         current_display = ""
