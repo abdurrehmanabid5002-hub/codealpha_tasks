@@ -111,13 +111,18 @@ with open(
     "w",
 ) as f:
     for url in urls:
-        response = requests.get(url)
-        if response.status_code == 200:
-            title = re.search(r"<title>(.*?)</title>", response.text)
-            if title:
-                print(title.group(1))
-                f.write(title.group(1) + "\n")
-    else:
-        print("Failed to fetch the webpage")
+        try :
+            response = requests.get(url,timeout=2)
+            if response.status_code == 200:
+                title = re.search(r"<title>(.*?)</title>", response.text)
+                if title:
+                    print(title.group(1))
+                    f.write(title.group(1) + "\n")
+            
+            print(f"Failed to fetch the webpage{url} ")
+
+        except requests.exceptions.RequestException as e :
+            print (f"Error excessing {url}")
+            print (e)
 
 print("Title Saved successfully")
